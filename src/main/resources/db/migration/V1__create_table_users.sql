@@ -11,7 +11,7 @@ CREATE TABLE public.users
     last_name  VARCHAR(255) NOT NULL CHECK (last_name !~ '[0-9]'),
     password   VARCHAR(255) NOT NULL,
     email      VARCHAR(255) UNIQUE CHECK (POSITION('@' IN email) > 1),
-    birthday   DATE NOT NULL
+    birthday   DATE NOT NULL CHECK (birthday <= CURRENT_DATE)
 );
 
 ALTER TABLE public.users OWNER TO postgres;

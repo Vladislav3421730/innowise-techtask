@@ -1,5 +1,6 @@
-package com.example.innowisetechtask.model;
+package com.example.innowisetechtask.dto;
 
+import com.example.innowisetechtask.model.Role;
 import com.example.innowisetechtask.validation.NotDigit;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -12,11 +13,8 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
-@Table(name = "users")
 @Data
-public class User {
-
+public class UserDto {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_seq")
     @SequenceGenerator(name = "user_id_seq", sequenceName = "user_id_seq", allocationSize = 1)
@@ -53,7 +51,4 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<Role> roles = new HashSet<>();
-
-
-
 }
