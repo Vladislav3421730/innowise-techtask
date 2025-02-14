@@ -3,9 +3,6 @@ spring:
     name: innowise-techtask
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/taskdb
-    username: postgres
-    password: postgres
     driver-class-name: org.postgresql.Driver
     hikari:
       minimum-idle: 5

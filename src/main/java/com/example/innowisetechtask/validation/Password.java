@@ -12,7 +12,8 @@ import java.lang.annotation.Target;
 @Target({ ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Password {
-    String message() default "the value must not contain numbers";
+    String message() default "Password must be at least 8 characters long, contain at least one digit," +
+            " one uppercase letter, one lowercase letter, one special character, and have no whitespace.";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
