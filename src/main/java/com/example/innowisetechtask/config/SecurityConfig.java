@@ -33,7 +33,7 @@ public class SecurityConfig {
                         .invalidateHttpSession(true)
                         .deleteCookies("JSESSIONID"))
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/user","/user/update").authenticated()
+                        .requestMatchers("/user/**").authenticated()
                         .anyRequest().permitAll())
                 .build();
     }

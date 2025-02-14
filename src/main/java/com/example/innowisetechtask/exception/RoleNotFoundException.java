@@ -1,6 +1,6 @@
 package com.example.innowisetechtask.exception;
 
-public class RoleNotFoundException extends RuntimeException {
+public class RoleNotFoundException extends EntityNotFoundException {
     public RoleNotFoundException(String message) {
         super(message);
     }

@@ -20,7 +20,7 @@ public interface UserService {
 
     UpdateUserDto getUpdatedUser(Principal principal);
 
-    UserDto updateUserPassword(UpdateUserDto updateUserDto);
+    UserDto updateUser(UpdateUserDto updateUserDto);
 
     boolean updateUserPassword(UpdatePasswordDto passwordDto);
 

@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Error</title>
 </head>
 <body>
-
+<h1>Error <span th:text="${status}"></span></h1>
+<p th:text="${message}">Something went wrong...</p>
+<a href="/login">Go to Home</a>
 </body>
 </html>
